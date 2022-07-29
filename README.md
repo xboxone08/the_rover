@@ -1,5 +1,5 @@
-# the_rover_sim
-THE rover simulator.
+# the_rover
+THE rover.
 ## Setup
 ### System running the code
 - This code can be run from any OS, but must connect to a (or multiple) Raspberry Pi "rover(s)".
