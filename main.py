@@ -12,7 +12,7 @@ while True:
     try:
         # Verify IPv4 address to be valid
         if ip != "":
-            if ip.count(".") != 4:
+            if ip.count(".") != 3:
                 raise ValueError
             if len(ip) > 15:
                 raise ValueError
