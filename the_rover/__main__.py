@@ -1,14 +1,16 @@
+#! /usr/bin/env python3
 from gpiozero import Robot
 from gpiozero.pins.pigpio import PiGPIOFactory
 from keyboard import on_release_key, is_pressed
+from fabric import Connection
 
-"""Run with sudo"""
+"""Run with sudo on Linux"""
 
-ips = []
+ips: list[str] = []
 
 # Get rover IPv4 addresses from user
 while True:
-    ip = input("Enter a rover's IPv4 address or leave blank if you're done. ")
+    ip: str = input("Enter a rover's IPv4 address or leave blank if you're done. ")
     try:
         # Verify IPv4 address to be valid
         if ip != "":
@@ -28,25 +30,48 @@ while True:
     except ValueError:
         print("Invalid IPv4 address:", ip)
 
-factories = []
+# Initialize rovers using the IPs
+
+factories: list[PiGPIOFactory] = []
+sshs: list[Connection] = []
 for ip in ips:
     factories.append(PiGPIOFactory(host=ip))
+    sshs.append(Connection(ip, "pi", 22))
 
-rovers = []
+rovers: list[tuple[Robot, Robot]] = []
 for factory in factories:
     rovers.append((Robot((19, 26), (16, 20)), Robot((27, 22), (23, 24))))
 
-x = 0
+x: int = 0
 
-rover = rovers[x]
+rover: tuple[Robot, Robot] = rovers[x]
+
+# Hotkeys
 
 
 def next_rover(_=None):
+    global x
     x = 0 if x >= len(rovers) - 1 else x + 1
-    print("Switched to rover", rovers.index(rover) + ".", f"(IP: {ip[rovers.index(rover)]})")
+    print("Switched to rover", rovers.index(rover) +
+          ".", f"(IP: {ip[rovers.index(rover)]})")
+
+
+def previous_rover(_=None):
+    global x
+    x = len(rovers) - 1 if x < 0 else x - 1
+    print("Switched to rover", rovers.index(rover) +
+          ".", f"(IP: {ip[rovers.index(rover)]})")
+
+
+def capture(_=None):
+    sshs[x].run("rm img.jpg")
+    sshs[x].run("raspistill -o img.jpg")
+    sshs[x].get("img.jpg", preserve_mode=False)
 
 
 on_release_key("n", next_rover)
+on_release_key("p", previous_rover)
+on_release_key("c", capture)
 
 while True:
     if is_pressed("w"):

@@ -9,6 +9,7 @@ dependencies = [
     "gpiozero",
     "pigpio",
     "keyboard",
+    "fabric",
 ]
 
 [project.scripts]

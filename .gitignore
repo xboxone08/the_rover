@@ -1,6 +1,6 @@
 **/__pycache__/
 *.pyc
 **/build/
-**/rover.egg-info/
+**/the_rover.egg-info/
 *.whl
 *.tar.gz
