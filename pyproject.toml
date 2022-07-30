@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rover"
+name = "the_rover"
 version = "0.1.1-alpha"
 dependencies = [
     "gpiozero",
@@ -12,4 +12,4 @@ dependencies = [
 ]
 
 [project.scripts]
-rover = "rover:__main__"
+rover = "the_rover:__main__"

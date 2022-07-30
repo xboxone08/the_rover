@@ -6,7 +6,7 @@ There are three methods:
 
 - Clone the repository and run `pip install -r requirements.txt` to install the requirements to the active Python installation.
 
-- Clone the repository and run `pip install .` in the directory you cloned it into to do the same thing and allow running with `rover` in your terminal.
+- Clone the repository and run `pip install .` in the directory you cloned it into to do the same thing and allow running with `the_rover` in your terminal.
 
 ## Setup
 ### System running the code
@@ -21,12 +21,12 @@ There are three methods:
 
 ## Usage
 ### Running
-Once in the directory you cloned the repository to, you can run the code by either using:
-- `python3 rover/__main__.py` on Mac/Linux or `python rover\__main__.py` on Windows.
-- `python3 -m rover` on Mac/Linux or `python -m rover` on Windows.
-Or, if you installed it using `pip install .`, simply run `rover` from anywhere.
+Once in the directory you cloned the repository to, you can run the code by either using one of the following:
+- `python3 the_rover/__main__.py` on Mac/Linux or `python the_rover\__main__.py` on Windows.
+- `python3 -m the_rover` on Mac/Linux or `python -m the_rover` on Windows. (It can be run without `-m` but I'm not sure as to what that changes.)
+Or, if you installed it using `pip install .`, `the_rover` from anywhere.
 Note: Due to its dependency on the `keyboard` module, the code must be run with `sudo` on most Linux systems.
 
 ### Once running
 - Press "n" to cycle through rovers if using multiple.
-- WASD for controlling rover.
+- WASD for controlling rover. (Only one control at a time.)
