@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "the_rover"
-version = "0.1.1-alpha"
+version = "1.0.0"
 dependencies = [
     "gpiozero",
     "pigpio",
