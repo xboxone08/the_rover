@@ -24,6 +24,7 @@ There are three methods:
 Once in the directory you cloned the repository to, you can run the code by either using one of the following:
 - `python3 the_rover/__main__.py` on Mac/Linux or `python the_rover\__main__.py` on Windows.
 - `python3 -m the_rover` on Mac/Linux or `python -m the_rover` on Windows. (It can be run without `-m` but I'm not sure as to what that changes.)
+
 Or, if you installed it using `pip install .`, `the_rover` from anywhere.
 
 Note: Due to its dependency on the `keyboard` module, the code must be run with `sudo` on most Linux systems.
