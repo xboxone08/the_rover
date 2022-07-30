@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rover"
+version = "0.1.1-alpha"
+dependencies = [
+    "gpiozero",
+    "pigpio",
+    "keyboard",
+]
+
+[project.scripts]
+rover = "rover:__main__"

@@ -8,7 +8,7 @@ ips = []
 
 # Get rover IPv4 addresses from user
 while True:
-    ip = input("Enter a rover's IPv4 address or leave blank if you're done.")
+    ip = input("Enter a rover's IPv4 address or leave blank if you're done. ")
     try:
         # Verify IPv4 address to be valid
         if ip != "":
@@ -17,7 +17,7 @@ while True:
             if len(ip) > 15:
                 raise ValueError
             for i in range(len(ip)):
-                if ip != "0" and ip != "1" and ip != "2" and ip != "3" and ip != "4" and ip != "5" and ip != "6" and ip != "7" and ip != "8" and ip != "9" and ip != ".":
+                if ip[i] != "0" and ip[i] != "1" and ip[i] != "2" and ip[i] != "3" and ip[i] != "4" and ip[i] != "5" and ip[i] != "6" and ip[i] != "7" and ip[i] != "8" and ip[i] != "9" and ip[i] != ".":
                     raise ValueError
             ips.append(ip)
         else:
@@ -42,24 +42,30 @@ rover = rovers[x]
 
 
 def next_rover(_=None):
-    x = 0 if x >= len(rovers) - 1 else x + 1  # Epic one-liner
+    x = 0 if x >= len(rovers) - 1 else x + 1
+    print("Switched to rover", rovers.index(rover) + ".", f"(IP: {ip[rovers.index(rover)]})")
 
 
 on_release_key("n", next_rover)
 
 while True:
     if is_pressed("w"):
+        print("Forward")
         rover[0].forward()
         rover[1].forward()
     elif is_pressed("s"):
+        print("Backward")
         rover[1].backward()
         rover[0].backward()
     elif is_pressed("a"):
+        print("Left")
         rover[0].left()
         rover[1].left()
     elif is_pressed("d"):
+        print("Right")
         rover[0].right()
         rover[1].right()
     else:
+        print("Stop")
         rover[1].stop()
         rover[0].stop()
