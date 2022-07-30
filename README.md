@@ -1,7 +1,9 @@
 # the_rover
 THE rover.
 ## Installation
-There are two methods:
+There are three methods:
+- Clone the repository and manually install requirements.
+
 - Clone the repository and run `pip install -r requirements.txt` to install the requirements to the active Python installation.
 
 - Clone the repository and run `pip install .` in the directory you cloned it into to do the same thing and allow running with `rover` in your terminal.
@@ -10,7 +12,7 @@ There are two methods:
 ### System running the code
 - This code can be run from any OS, but must connect to a (or multiple) Raspberry Pi "rover(s)".
 
-- The system running the code must have `gpiozero`, `pigpio`, and `keyboard` installed.
+- The system running the code must have `gpiozero`, `pigpio`, and `keyboard` installed (Automatically installed using the latter two commands for installation).
 
 ### Raspberry Pi "Rover"
 - The code expects pins 19 and 26 to control your front left motor, 16 and 20 your front right, 27 and 22 your back left, and 23 and 24 you back right (BCM numbering). The pins to which these numbers correspond to on your Pi can be found by running the `pinout` command in Bash.
