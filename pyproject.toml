@@ -5,11 +5,16 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "the_rover"
 version = "1.0.0"
+authors = [{name = "Medhansh Choudhury", email = "sondad2008@gmail.com"},]
+maintainers = [
+    {name = "Medhansh Choudhury", email = "sondad2008@gmail.com"},
+    {name = "Alex Bace", email = "alexbace2@gmail.com"},
+]
 description = "THE rover. Allows controlling Raspberry Pi \"rovers\" remotely and interactively from any OS's command line."
 readme = "README.md"
 requires-python = ">=3.0.0"
-keywords = ["rover"]
 license = {text = "GNU Affero General Public License v3.0"}
+keywords = ["the_rover", "the-rover", "rover"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
@@ -17,6 +22,7 @@ classifiers = [
     "Natural Language :: English",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: Implementation :: CPython",
+    "Operating System :: OS Independent",
 ]
 dependencies = [
     "gpiozero",
@@ -27,3 +33,9 @@ dependencies = [
 
 [project.scripts]
 the_rover = "the_rover:__main__"
+
+[project.urls]
+"Homepage" = "https://https://github.com/xboxone08/the_rover"
+"Documentation" = "https://github.com/xboxone08/the_rover/blob/main/README.md"
+"Issues" = "https://github.com/xboxone08/the_rover/issues"
+"Releases" = "https://github.com/xboxone08/the_rover/releases"
