@@ -1,5 +1,5 @@
 # the_rover
-THE rover.
+THE rover. Allows controlling Raspberry Pi "rovers" remotely and interactively from any OS's command line.
 ## Installation
 There are three methods:
 - Clone the repository and manually install requirements.
