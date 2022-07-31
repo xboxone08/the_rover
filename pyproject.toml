@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "the_rover"
-version = "1.0.1"
+version = "1.0.2"
 authors = [{name = "Medhansh Choudhury", email = "sondad2008@gmail.com"},]
 maintainers = [
     {name = "Medhansh Choudhury", email = "sondad2008@gmail.com"},
@@ -21,7 +21,6 @@ classifiers = [
     "License :: OSI Approved :: GNU Affero General Public License v3",
     "Natural Language :: English",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: Implementation :: CPython",
     "Operating System :: OS Independent",
 ]
 dependencies = [
