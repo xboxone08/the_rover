@@ -10,7 +10,7 @@ There are five methods:
 
 - Don't clone the repository. Just download the .whl file in the latest release and `pip install` it.
 
-- `pip install the_rover` to install from PyPi.
+- Don't clone the repository. Just `pip install the_rover` to install from PyPi.
 
 ## Setup
 ### System running the code
