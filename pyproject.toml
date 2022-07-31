@@ -5,6 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "the_rover"
 version = "1.0.0"
+description = "THE rover. Allows controlling Raspberry Pi \"rovers\" remotely and interactively from any OS's command line."
+readme = "README.md"
+requires-python = ">=3.0.0"
+keywords = ["rover"]
+license = {text = "GNU Affero General Public License v3.0"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
 dependencies = [
     "gpiozero",
     "pigpio",
@@ -13,4 +26,4 @@ dependencies = [
 ]
 
 [project.scripts]
-rover = "the_rover:__main__"
+the_rover = "the_rover:__main__"
