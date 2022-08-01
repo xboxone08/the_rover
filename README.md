@@ -14,7 +14,7 @@ There are five methods:
 
 ## Setup
 ### System running the code
-- This code can be run from any OS, but must connect to a (or multiple) Raspberry Pi "rover(s)".
+- The code can be run from any OS, but must connect to a (or multiple) Raspberry Pi "rover(s)".
 
 - The system running the code must have `gpiozero`, `pigpio`, `keyboard`, and `fabric` installed (Automatically installed using the last four commands for installation).
 
