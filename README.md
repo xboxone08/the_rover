@@ -29,7 +29,7 @@ There are five methods:
 
 ## Usage
 ### Running
-Once in the directory you cloned the repository to, you can run the code by either using `python(3) the_rover(/__main__.py)` unless you used the last two methods of installation.
+Once in the directory you cloned the repository to, you can run the code by using `python(3) the_rover(/__main__.py)` unless you used the last two methods of installation.
 
 Or, if you installed it using any of the last three installation commands, `(python(3) -m )the_rover` from anywhere.
 
