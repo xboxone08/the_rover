@@ -2,7 +2,7 @@
 THE rover. Allows controlling Raspberry Pi "rovers" remotely and interactively from any OS's command line.
 ## Installation
 There are five methods:
-- Clone the repository and manually install requirements.
+- Clone the repository and manually install the [requirements](requirements.txt).
 
 - Clone the repository and run `pip(3) install -r requirements.txt` to install the requirements to the active Python installation.
 
@@ -24,6 +24,8 @@ There are five methods:
 - The code makes use of Remote GPIO to control the rover Pi, so it must have the "Remote GPIO" interface enabled in `sudo raspi-config`/Raspberry Pi Configuration/config.txt, have the `pigpio` Python module installed (`pip3 install pigpio`), and must `systemctl enable pigpiod` or alternatively use cron (`sudo crontab -e`) to run `pigpiod` at startup (`@reboot`) (Doesn't requires enabling Remote GPIO. Useful for allowing only specific IPs/hostnames using the `-n` flag. See the [Remote GPIO documentation](https://gpiozero.readthedocs.io/en/stable/remote_gpio.html#command-line-pigpiod) for more details.)
 
 - The code uses `raspistill`, so the "Camera" interface must be enabled in `sudo raspi-config`/Raspberry Pi Configuration/config.txt, and a PiCamera must be connected (Instructions [here](https://picamera.readthedocs.io/en/release-1.13/quickstart.html)).
+
+- The code uses SSH and SFTP, so the "SSH" interface must be enabled.
 
 ## Usage
 ### Running
