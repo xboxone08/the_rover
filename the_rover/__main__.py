@@ -70,6 +70,7 @@ for factory in factories:
     rovers.append((Robot((19, 26), (16, 20)), Robot((27, 22), (23, 24))))
 
 x: int = 0
+rover: tuple[Robot, Robot] = rovers[x]
 
 # Hotkeys
 
@@ -99,7 +100,7 @@ on_release_key("p", previous_rover)
 on_release_key("c", capture)
 
 while True:
-    rover: tuple[Robot, Robot] = rovers[x]
+    rover = rovers[x]
     if is_pressed("w"):
         print("Forward")
         rover[0].forward()
